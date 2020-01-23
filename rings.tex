@@ -1,0 +1,89 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[a4paper, total={6in, 8in}]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{mathtools}
+\usepackage{amsthm}
+
+\title{Rings}
+\author{Giannis Tyrovolas}
+
+\newtheorem{theorem}{Theorem}[section]
+
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{corollary}[theorem]{Corollary}
+
+\DeclarePairedDelimiter\abs{\lvert}{\rvert}
+\DeclarePairedDelimiter\norm{\lVert}{\rVert}
+
+\begin{document}
+
+\maketitle
+
+\section{Introduction}
+
+In the ``beautiful'' mental position that is Hilary of the second year I decided to study rings. What is a ring? Why is it important? We will hopefully learn. But quite possibly not. Let's end this section with a quote.\newline
+
+
+
+\framebox[1.1\width]{If you liked it then you shoulda put a ring on it - Beyonce} \par
+
+\section{Recap on rings}
+
+Let's start this section with the obvious thing we should define. The ring!
+
+\begin{definition}[Ring]
+
+A ring $(R, +, \times)$ is made of a set $R$ (also called the carrier set) and two binary operations $+: R \times R \longrightarrow R$, $\times: R \times R \longrightarrow R$. Such that:
+\begin{enumerate}
+	\item $(R, +)$ is an abelian group.
+	\item $\times$ is associative 
+	\item $\times$ distributes over $+$ i.e. $\forall a,b,c \in R$\newline
+$$
+	a \times (b + c) = a \times b + a \times c \text{ and} (a + b) \times c = a \times c + b \times c
+$$
+\end{enumerate}
+
+If $R$ has a multiplicative identity we call $R$ \emph{unital}
+\end{definition}
+
+\begin{theorem}[Basic properties]
+\begin{enumerate}
+	\item Zero is annihilating: $\forall r \in R \; 0_R r = 0_R = r 0_R$
+	\item $(-x)y = -xy = x(-y)$
+\end{enumerate}
+\end{theorem}
+
+\begin{proof}
+\begin{enumerate}
+	\item $0_R r = (0_R + 0_R) r = 0_R r + 0_R r \implies 0_R r = 0_R$
+	\item $xy + (-x)y = (x - x)y = 0_R y = 0_R$ Hence by the uniqueness of the inverse of $-xy$, $(-x)y = -xy$. Similarly for $x(-y)$
+\end{enumerate}
+\end{proof}
+
+\begin{definition}[Unit group]
+For a \emph{unital} ring $R$ denote $U(R)$ the set of $r \in R$ with a multiplicative inverse. 
+\end{definition}
+
+\begin{theorem}
+$(U(R), \times)$ is a group.  
+\end{theorem}
+
+\begin{proof}
+\begin{enumerate}
+	\item Associativity is inherited
+	\item Identity: $1_R \in U(R)$ trivially.
+	\item Inverse: By definition of $U(R)$
+	\item Closure: Let $x, y \in U(R)$ then $\exists x^{-1}, y^{-1} \in U(R)$. Then $(xy)(y^{-1}x^{-1}) = 1_R \implies xy \in U(R)$
+\end{enumerate}
+\end{proof}
+
+
+
+
+\end{document}
+
