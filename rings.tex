@@ -92,8 +92,21 @@ If $R$ is a unital ring and $1_R \in S$ then $S$ is a unital subring.
 Let $\mathcal{Q}$ a set of subrings of a ring $R$. Then $\bigcap\limits_{S \in \mathcal{Q}} S$ is a subring of $R$.
 \end{lemma}
 
+\begin{definition}[Generated Subring]
+\[
+	S[\lambda_1,..., \lambda_n] = \bigcap\{T : T \text{ is a subring of }R \text{ and } \lambda_1,\ldots, \lambda_n \in T \text{ and } S \subseteq T \}
+\]
+\end{definition}
 
+\begin{definition}[Homomorphisms]
+Let $\phi: R \longrightarrow S$ where $R, S$ rings. And $\forall x, y \in R$:
+\[
+	\phi(x + y) = \phi(x) + \phi(y) \ \ \ \ \ \text{and} \ \ \ \ \ \  \phi(xy) = \phi(x) \phi(y)
+\]
+Then $\phi$ is a homomorphism.
 
+If $R, S$ are unital and $\phi(1_R) = 1_S$ then $\phi$ is a unital homomorphism.
+\end{definition}
 
 
 \end{document}
