@@ -1,5 +1,5 @@
 \documentclass[11pt,a4paper]{article}
-\usepackage[a4paper, total={6in, 8in}]{geometry}
+\usepackage[a4paper, total={6.5in, 8in}]{geometry}
 \usepackage[utf8]{inputenc}
 \usepackage{amsfonts}
 \usepackage{amssymb}
@@ -16,6 +16,7 @@
 \newtheorem{definition}[theorem]{Definition}
 \newtheorem{example}[theorem]{Example}
 \newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{lemma}[theorem]{Lemma}
 
 \DeclarePairedDelimiter\abs{\lvert}{\rvert}
 \DeclarePairedDelimiter\norm{\lVert}{\rVert}
@@ -78,9 +79,19 @@ $(U(R), \times)$ is a group.
 	\item Associativity is inherited
 	\item Identity: $1_R \in U(R)$ trivially.
 	\item Inverse: By definition of $U(R)$
-	\item Closure: Let $x, y \in U(R)$ then $\exists x^{-1}, y^{-1} \in U(R)$. Then $(xy)(y^{-1}x^{-1}) = 1_R \implies xy \in U(R)$
+	\item Closure: Let $x, y \in U(R)$ then $\exists x^{-1}, y^{-1} \in U(R)$. \newline Then $(xy)(y^{-1}x^{-1}) = 1_R \implies xy \in U(R)$
 \end{enumerate}
 \end{proof}
+
+\begin{definition}[Subrings]
+Let $R$ be a ring and $S \subseteq R$ such that $S$ is a ring. Then $S$ is a subring.
+If $R$ is a unital ring and $1_R \in S$ then $S$ is a unital subring.
+\end{definition}
+
+\begin{lemma}[Closure of intersection]
+Let $\mathcal{Q}$ a set of subrings of a ring $R$. Then $\bigcap\limits_{S \in \mathcal{Q}} S$ is a subring of $R$.
+\end{lemma}
+
 
 
 
