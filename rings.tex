@@ -108,6 +108,21 @@ Then $\phi$ is a homomorphism.
 If $R, S$ are unital and $\phi(1_R) = 1_S$ then $\phi$ is a unital homomorphism.
 \end{definition}
 
+\begin{lemma}[Inverses]
+Let $\phi: R \longrightarrow S$ a homomorphism. Then $\phi(0_R) = 0_S$ and $\forall r \in R$,  $\phi(-r) = -\phi(r)$. If $\phi$ is unital then $\forall x \in U(R)$, $\phi(x) \in U(S)$ and $\phi(x)^{-1} = \phi(x^{-1})$.
+\end{lemma}
+
+\begin{proof}
+\[
+	\phi(0_R) = \phi(0_R + 0_R) = \phi(0_R) + \phi(0_R) \implies \phi(0_R) = 0_S
+\]
+\[
+	0_S = \phi(0_R) = \phi(x) + \phi(-x) \implies \phi(-x) = -\phi(x) 
+\]
+Similarly for $\phi(x)^{-1} = \phi(x^{-1})$
+\end{proof}
+
+
 
 \end{document}
 
