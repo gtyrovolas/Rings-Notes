@@ -122,6 +122,35 @@ Let $\phi: R \longrightarrow S$ a homomorphism. Then $\phi(0_R) = 0_S$ and $\for
 Similarly for $\phi(x)^{-1} = \phi(x^{-1})$
 \end{proof}
 
+\section{Integral Domains and Polynomials}
+
+\begin{definition}[Zero dividers]
+$r \in R$ is a (left) \emph{zero divider} if $\exists s \in R^*$ such that $xy = 0_R$
+\end{definition}
+% add the examples
+
+\begin{definition}[Integral Domains]
+$R$ is an integral domain if it is a non-trivial, commutative, unital ring with no zero-divisors.
+\end{definition}
+
+\begin{lemma}
+	If $R$ is an integral domain then if $x\in R^*$ $xy=xz \implies y = z$
+\end{lemma}
+
+\begin{proof}
+\[
+	0_R = xy - xz = x(y-z) \implies y-z = 0\implies y = z \text{ since } x \text{ is not a zero-divider}
+\]
+\end{proof}
+
+\begin{theorem} 
+A finite integral domain is a field.
+\end{theorem}
+
+\begin{proof}
+Consider $R \longrightarrow R$, $x \mapsto ax$ where $a \in R^*$. This map is injective by cancellation. Since $R$ is finite it is also surjective and hence $r \in R$ such that $ar = 1_R = ra$. So $a$ has an inverse and since $a$ is arbitrary $R$ is a field.
+\end{proof}
+
 
 
 \end{document}
