@@ -125,7 +125,7 @@ Similarly for $\phi(x)^{-1} = \phi(x^{-1})$
 \section{Integral Domains and Polynomials}
 
 \begin{definition}[Zero dividers]
-$r \in R$ is a (left) \emph{zero divider} if $\exists s \in R^*$ such that $xy = 0_R$
+$r \in R$ is a (left) \emph{zero divider} if $\exists s \in R^*$ such that $rs = 0_R$
 \end{definition}
 % add the examples
 
@@ -143,14 +143,49 @@ $R$ is an integral domain if it is a non-trivial, commutative, unital ring with 
 \]
 \end{proof}
 
+This proof is refered to the notes as ``cute''. Its a 7 at best.
+
 \begin{theorem} 
 A finite integral domain is a field.
 \end{theorem}
 
 \begin{proof}
-Consider $R \longrightarrow R$, $x \mapsto ax$ where $a \in R^*$. This map is injective by cancellation. Since $R$ is finite it is also surjective and hence $r \in R$ such that $ar = 1_R = ra$. So $a$ has an inverse and since $a$ is arbitrary $R$ is a field.
+Consider $R \longrightarrow R$, $x \mapsto ax$ where $a \in R^*$. This map is injective by cancellation. Since $R$ is finite it is also surjective and hence $\exists r \in R$ such that $ar = 1_R$. By commutativity it is a two sided inverse. So $a$ has an inverse and since $a$ is arbitrary $R$ is a field.
 \end{proof}
 
+Basic stuff about polynomials, what you'd expect without having done any rings.
+
+\begin{definition}[Polynomial]
+Let $R$ be a non-trivial commutative, unital ring. Then we write $R[X]$ the set of $R$-polynomials with coefficients in $R$ and variable $X$. These are of the form:
+\[
+	p(X) = \sum_{i=0}^\infty r_i X^i
+\]
+where $r_i \in R$ and $r_i \in R^*$ for finitely many $i$.
+
+Two polynomials are equal if all their coefficients are equal. Also let polynomials $p, q$ with coefficients $a_i$, $b_i$. Then:
+
+\[
+	(p + q)(X)= \sum_{i = 0}^\infty(a_i + b_i)X^i \ \ \ (pq)(X) = \sum_{i = 0}^\infty(\sum_{j=0}^{i}a_jb_{i-j})X^i 	  	
+\]  
+\end{definition}
+
+\begin{theorem}
+The following are equivalent:
+\begin{enumerate}
+	\item $R$ is an integral domain
+	\item $R[X]$ is an integral domain
+	\item $p, q \in R[X]^* \implies pq \in R[X]^*$ and $\deg pq = \deg p + \deg q$ 
+	\item A polynomial of degree $d$ has at most $d$ roots
+\end{enumerate}
+\end{theorem}
+
+\begin{proof}
+Most of these are trivial. (2) implies (1) by considering constant polynomials. (3) implies (2) by definition. Now, (1) implies (3) since for $\deg p = n$, $\deg q = m$ the coefficient $n+m$th coefficient of $pq$ is $a_n b_m$. Since $R$ is an integral domain and $a_n, b_m \neq 0_R$, $a_n b_m \neq 0_R \implies \deg pq = n + m$
+
+For (4) implying (1): Consider the polynomial $p(X) = rX$, $r \neq 0_R$. Since $p(X)$ has only one root and $0_R$ is a root there are no other roots. So $R$ is an integral domain.
+
+Now for (1) + (2) $\implies$ (4). 
+\end{proof}
 
 
 \end{document}
